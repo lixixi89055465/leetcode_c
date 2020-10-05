@@ -17,7 +17,11 @@ bool check_is_valid_order(std::queue<int>& order) {
 	return true;
 }
 
+<<<<<<< HEAD
 int maincheck_is_valid_order() {
+=======
+int mainaa() {
+>>>>>>> 67ecc8054d1093c3f46544e50a86fa7f48b60073
 	int n;
 	int train;
 	scanf_s("%d", &n);
