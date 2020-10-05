@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-int  mainc() {
+int  main() {
 	printf("tiakong");
 	return 0;
 }
