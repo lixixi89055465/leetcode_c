@@ -4,3 +4,4 @@
 *.vcxproj.user
 x64
 .vs
+.idea
