@@ -4,5 +4,4 @@ project(leetcode_C)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(leetcode_C
-        bbb.cpp
-        hello.c)
+        calculate2.cpp)
