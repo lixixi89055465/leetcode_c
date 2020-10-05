@@ -91,6 +91,7 @@ int main() {
     printf("tiaknog");
 	std::string s = "1+121 - (14+(5-6 ) )";
 	Solution solve;
-	printf("%d");
+	int result=solve.calculate(s);
+	printf("\n%d",result);
 
 }
