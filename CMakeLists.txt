@@ -4,4 +4,4 @@ project(leetcode_C)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(leetcode_C
-        STL_priority_queue.cpp 455_findContentChildren.cpp)
+        455_findContentChildren.cpp)
