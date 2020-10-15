@@ -4,4 +4,4 @@ project(leetcode_C)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(leetcode_C
-        055_canJump.cpp)
+        055_canJump2.cpp)
