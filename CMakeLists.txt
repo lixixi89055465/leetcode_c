@@ -4,4 +4,4 @@ project(leetcode_C)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(leetcode_C
-        base/base.cpp)
+        lcd/078_subsets.cpp)
