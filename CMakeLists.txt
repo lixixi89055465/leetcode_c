@@ -4,4 +4,6 @@ project(leetcode_C)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(leetcode_C
-        lcd/078_subsets4.cpp lcd/022_generateParenthesis.cpp)
+        lcd/022_generateParenthesis_B.cpp
+#        lcd/022_generateParenthesis.cpp
+        )
