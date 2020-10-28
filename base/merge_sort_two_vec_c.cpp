@@ -6,9 +6,9 @@
 
 class Solution {
 public:
-    std::vector<int> sort(std::vector<int> result) {
+    void sort(std::vector<int> &result) {
         if (result.size() <= 1) {
-            return result;
+            return ;
         }
         int mid = result.size() / 2;
         std::vector<int> sub1;
@@ -19,11 +19,10 @@ public:
         for (int i = mid; i < result.size(); i++) {
             sub2.push_back(result[i]);
         }
-        sub1 = sort(sub1);
-        sub2 = sort(sub2);
+        sort(sub1);
+        sort(sub2);
         result.clear();
         merge(sub1, sub2, result);
-        return result;
 
     }
 
@@ -54,14 +53,15 @@ public:
 int main() {
     std::vector<int> vec1;
     std::vector<int> vec2;
-    srand(time(NULL))
+    srand(time(NULL));
     for(int i=0;i<10000;i++){
-        int num=(rand()*10000;i++);
+        int num=(rand()*rand())%10003;
         vec1.push_back(num);
         vec2.push_back(num);
     }
-    merge(vec1);
-    std::sort(vec2.begin,vec2.end());
+    Solution solve;
+    solve.sort(vec1);
+    std::sort(vec2.begin(),vec2.end());
     assert(vec1.size()==vec2.size());
     for(int i=0;i<vec1.size();i++){
         assert(vec1[i]==vec2[i]);
