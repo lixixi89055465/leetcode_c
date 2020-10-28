@@ -8,4 +8,5 @@ add_executable(leetcode_C
 #        lcd/022_generateParenthesis.cpp
 #        lcd/052_solveNQueens.cpp
 #        lcd/052_solveNQueens_A.cpp
-        base/merge_sort_two_vec.cpp)
+#        base/merge_sort_two_vec.cpp)
+        base/merge_sort_two_vec_a.cpp)
