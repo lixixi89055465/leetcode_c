@@ -23,12 +23,23 @@ private:
             std::vector<std::pair<int, int>> &sub_vec2,
             std::vector<std::pair<int, int>> &vec,
             std::vector<int> &count) {
-        for (int i = 0; i < sub_vec1.size(); i++) {
-            for (int j = 0; j < sub_vec2.size(); j++) {
-                if (sub_vec1[i].first > sub_vec2[j].first) {
-                    count[sub_vec1[i].second]++;
-                }
+        int i = 0, j = 0;
+        while (sub_vec1.size() > i && sub_vec2.size() > j) {
+            if (sub_vec1[i].first <= sub_vec2[j].first) {
+                count[sub_vec1[i].second] += j;
+                vec.push_back(sub_vec1[i]);
+                i++;
+            } else {
+                vec.push_back(sub_vec2[j]);
+                j++;
             }
+        }
+        for (; i < sub_vec1.size(); i++) {
+            count[sub_vec1[i].second] += j;
+            vec.push_back(sub_vec1[i]);
+        }
+        for (; j < sub_vec2.size(); j++) {
+            vec.push_back(sub_vec2[j]);
         }
     }
 
@@ -48,20 +59,17 @@ private:
         }
         merge_sort(sub_vec1, count);
         merge_sort(sub_vec2, count);
+        vec.clear();
         merge_sort_two_vec(sub_vec1, sub_vec2, vec, count);
     }
 };
 
 int main() {
+    int test[] = {5, -7, 9, 1, 3, 5, -2, 1};
     std::vector<int> nums;
-    nums.push_back(-7);
-    nums.push_back(1);
-    nums.push_back(5);
-    nums.push_back(9);
-    nums.push_back(-2);
-    nums.push_back(1);
-    nums.push_back(5);
-    nums.push_back(3);
+    for (int i = 0; i < 8; i++) {
+        nums.push_back(test[i]);
+    }
     Solution solve;
     std::vector<int> count = solve.countSmaller(nums);
     printf("\n");
