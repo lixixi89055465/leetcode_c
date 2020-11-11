@@ -13,4 +13,5 @@ add_executable(leetcode_C
         #        base/merge_sort_two_vec_c.cpp
         #        lcd/315_countSmaller.cpp
         #        lcd/TreeNode_stu.cpp
-        lcd/113_pathSum.cpp)
+        #        lcd/113_pathSum.cpp
+        lcd/236_lowest_common_ancestor_of_a_binary_tree.cpp)
