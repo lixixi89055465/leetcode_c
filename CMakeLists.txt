@@ -11,4 +11,5 @@ add_executable(leetcode_C
 #        base/merge_sort_two_vec.cpp)
 #        base/merge_sort_two_vec_a.cpp)
 #        base/merge_sort_two_vec_c.cpp
-        lcd/315_countSmaller.cpp)
+#        lcd/315_countSmaller.cpp
+        lcd/TreeNode_stu.cpp)
