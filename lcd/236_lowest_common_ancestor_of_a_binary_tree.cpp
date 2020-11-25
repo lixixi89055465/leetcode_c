@@ -15,7 +15,22 @@ struct TreeNode {
 
 class Solution {
 public:
-    void preOrder(TreeNode *root) {
+    void preOrder(TreeNode *node,
+                  TreeNode *search,
+                  std::vector<TreeNode *> &path,//遍历时的节点路径栈
+                  std::vector<TreeNode *> &result,//最终搜索到节点search 的路径结果
+                  int &finish) {
+        if (!node || finish) {
+            return;
+        }
+        path.push_back(node);
+        if (node == search) {
+            finish = 1;
+
+        }
+        preOrder(node->left, search, path, result, finish);
+        preOrder(node->right, search, path, result, finish);
+        path.pop_back();
 
     }
 
