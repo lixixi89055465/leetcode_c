@@ -23,6 +23,28 @@ public:
         flatten(root->left, nodeList);
         flatten(root->right, nodeList);
     }
+
+    void flatten_in_place(TreeNode *root) {
+        if (!root) {
+            return;
+        }
+        if (root->val == 1) {
+            assert("");
+        }
+        TreeNode *right, *left;
+        if (root->left && root->right) {
+            left = root->left;
+            right = root->right;
+            root->right = root->left;
+            root->left = NULL;
+            while (left->right) {
+                left = left->right;
+            }
+            left->right = right;
+        }
+
+        flatten_in_place(root->right);
+    }
 };
 
 int main() {
@@ -47,13 +69,15 @@ int main() {
     e.right = &z;
 
     Solution solve;
-    std::vector<TreeNode *> nodeList;
     printf("test");
-    solve.flatten(&a, nodeList);
-    for (int i = 0; i < nodeList.size(); i++) {
-        printf("%d\t", nodeList[i]->val);
-    }
+
+
+    solve.flatten_in_place(&a);
+    TreeNode *root = &a;
+    do {
+        printf("\t%d", root->val);
+        root = root->right;
+    } while (root);
     printf("\n");
-    printf("fsdlaf");
     return 0;
 }
