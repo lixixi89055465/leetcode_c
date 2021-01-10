@@ -31,7 +31,7 @@ public:
         if (root->val == 1) {
             assert("");
         }
-        TreeNode *right, *left;
+        TreeNode *right = NULL, *left = NULL;
         if (root->left && root->right) {
             left = root->left;
             right = root->right;
