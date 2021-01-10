@@ -14,4 +14,5 @@ add_executable(leetcode_C
         #        lcd/315_countSmaller.cpp
         #        lcd/TreeNode_stu.cpp
         #        lcd/113_pathSum.cpp
-        lcd/236_lowest_common_ancestor_of_a_binary_tree.cpp)
+#        lcd/236_lowest_common_ancestor_of_a_binary_tree.cpp
+        lcd/114_flatten_binary_tree_to_linked_list.cpp)
