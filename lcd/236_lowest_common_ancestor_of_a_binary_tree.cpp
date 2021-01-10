@@ -33,22 +33,6 @@ public:
         path.pop_back();
     }
 
-    void lowest_common_ancestor_of_a_binary_tree1(TreeNode *root, TreeNode *p, TreeNode *q, TreeNode *jiao) {
-        std::vector<TreeNode *> pathP, resultP;
-        std::vector<TreeNode *> pathQ, resultQ;
-
-        int finishP = 0;
-        int finishQ = 0;
-        preOrder(root, p, pathP, resultP, finishP);
-        preOrder(root, q, pathQ, resultQ, finishQ);
-        while (resultP.front() == resultQ.front()) {
-            jiao = resultP.front();
-            resultP.pop_back();
-            resultQ.pop_back();
-        }
-
-    }
-
     TreeNode *lowestCommonAncestor(TreeNode *root, TreeNode *p, TreeNode *q) {
         std::vector<TreeNode *> path;
         std::vector<TreeNode *> node_p_path;
@@ -78,26 +62,34 @@ public:
 
 
 int main() {
-    TreeNode a(5);
-    TreeNode b(4);
-    TreeNode c(8);
-    TreeNode d(11);
-    TreeNode e(13);
-    TreeNode f(4);
-    TreeNode g(7);
-    TreeNode h(2);
-    TreeNode i(5);
-    TreeNode j(1);
+    TreeNode a(3);
+    TreeNode b(5);
+    TreeNode c(1);
+    TreeNode d(6);
+    TreeNode e(2);
+    TreeNode f(0);
+
+    TreeNode x(8);
+    TreeNode y(7);
+    TreeNode z(4);
     a.left = &b;
     a.right = &c;
     b.left = &d;
-    c.left = &e;
-    c.right = &f;
-    d.left = &g;
-    d.right = &h;
+    b.right= &e;
 
-    f.left = &i;
-    f.right = &j;
+    c.left = &f;
+    c.right = &x;
+    e.left = &y;
+    e.right = &z;
+
+    Solution solve;
+    TreeNode *result = solve.lowestCommonAncestor(&a, &b, &f);
+    printf("lowestCommonAncestor = %d \n", result->val);
+    result = solve.lowestCommonAncestor(&a, &d, &z);
+    printf("lowest Common Ancestor = %d \n", result->val);
+    result = solve.lowestCommonAncestor(&a, &b, &y);
+    printf("lowest Common Ancestor = %d \n", result->val);
+
     return 0;
 }
 
