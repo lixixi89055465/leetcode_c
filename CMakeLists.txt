@@ -18,5 +18,7 @@ add_executable(leetcode_C
         #        lcd/114_flatten_binary_tree_to_linked_list.cpp
         #        base/BFS_print.cpp
         #        lcd/199_binary_tree_right_side_view.cpp
-#        base/Graph_base1.cpp
-        base/Graph_base2.cpp)
+        #        base/Graph_base1.cpp
+        #        base/Graph_base2.cpp
+#        base/Graph_base3.cpp
+        base/Graph_base4.cpp)
