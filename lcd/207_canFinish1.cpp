@@ -18,22 +18,20 @@ const int MAX_N = 5;
 class Solution {
 public:
 
+    //节点访问状态，-1没有访问过，0代表正在访问，1代表已完成访问
     bool DFS_graph(GraphNode *node, int visit[]) {
-        std::queue<GraphNode *> Q;
-        Q.push(node);
-        visit[node->label] = 1;
-        while (!Q.empty()) {
-            GraphNode *node = Q.front();
-            Q.pop();
-            printf("%d\t", node->label);
-            for (int i = 0; i < node->neightbors.size(); i++) {
-                if (visit[node->neightbors[i]->label] == 0) {
-                    Q.push(node->neightbors[i]);
-                    visit[node->neightbors[i]->label] = 1;
+        visit[node->label] = 0;
+        for (int i = 0; i < node->neightbors.size(); i++) {
+            if (visit[node->neightbors[i]->label] == -1) {
+                if (DFS_graph(node->neightbors[i], visit) == 0) {
+                    return false;
                 }
+            } else if (visit[node->neightbors[i]->label] == 0) {
+                return false;
             }
         }
-
+        visit[node->label] = 1;
+        return true;
     }
 
     void canFinish(GraphNode *node) {
