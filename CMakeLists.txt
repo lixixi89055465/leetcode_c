@@ -21,4 +21,4 @@ add_executable(leetcode_C
         #        base/Graph_base1.cpp
         #        base/Graph_base2.cpp
 #        base/Graph_base3.cpp
-        base/Graph_base4.cpp)
+        base/Graph_base4.cpp lcd/207_canFinish.cpp)
