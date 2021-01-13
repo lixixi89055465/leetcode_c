@@ -39,7 +39,7 @@ int main() {
     }
 
 //    printf("i= %d  index= %d \n", i, solve.searchRange(nums, i));
-    std::vector<int> result = solve.searchRange(nums, 7);
+    std::vector<int> result = solve.searchRange(nums, 4);
     for (int i = 0; i < result.size(); i++) {
         printf("%d\t", result[i]);
     }
