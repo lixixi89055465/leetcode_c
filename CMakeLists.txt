@@ -20,5 +20,7 @@ add_executable(leetcode_C
         #        lcd/199_binary_tree_right_side_view.cpp
         #        base/Graph_base1.cpp
         #        base/Graph_base2.cpp
-#        base/Graph_base3.cpp
-        base/Graph_base4.cpp lcd/207_canFinish.cpp)
+        #        base/Graph_base3.cpp
+        #        base/Graph_base4.cpp
+        #        lcd/207_canFinish.cpp
+        lcd/207_canFinish2.cpp)
