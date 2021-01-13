@@ -24,4 +24,5 @@ add_executable(leetcode_C
         #        base/Graph_base4.cpp
         #        lcd/207_canFinish.cpp
         #        lcd/207_canFinish2.cpp base/binary_search_base.cpp
-        lcd/035_searchInsert.cpp)
+        #        lcd/035_searchInsert.cpp
+        lcd/034_searchRange.cpp)
