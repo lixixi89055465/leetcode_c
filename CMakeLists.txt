@@ -27,4 +27,7 @@ add_executable(leetcode_C
         #        lcd/035_searchInsert.cpp
         #        lcd/034_searchRange.cpp
         #        lcd/033_search_in_rotated_sorted_array.cpp
-        base/Binary_Sort_Tree.cpp)
+        #        base/Binary_Sort_Tree.cpp
+        #        lcd/449_serialize-and-deserialize-bst.cpp
+        lcd/449_serialize-and-deserialize-bst1.cpp
+        )
