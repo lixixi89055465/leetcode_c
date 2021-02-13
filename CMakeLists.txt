@@ -29,5 +29,6 @@ add_executable(leetcode_C
         #        lcd/033_search_in_rotated_sorted_array.cpp
         #        base/Binary_Sort_Tree.cpp
         #        lcd/449_serialize-and-deserialize-bst.cpp
-        lcd/449_serialize-and-deserialize-bst1.cpp
-        lcd/315_count_of_smaller_number_after_self.cpp)
+#        lcd/449_serialize-and-deserialize-bst1.cpp
+#        lcd/315_count_of_smaller_number_after_self.cpp
+        base/hash_table_base.cpp)
