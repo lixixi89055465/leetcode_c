@@ -33,4 +33,5 @@ add_executable(leetcode_C
         #        lcd/315_count_of_smaller_number_after_self.cpp
         #        base/hash_table_base.cpp
         #        lcd/409_longest-palindrome.cpp
-        lcd/290_word-pattern.cpp)
+#        lcd/290_word-pattern.cpp
+        lcd/049_group-anagrams.cpp)
