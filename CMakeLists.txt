@@ -35,4 +35,5 @@ add_executable(leetcode_C
         #        lcd/409_longest-palindrome.cpp
         #        lcd/290_word-pattern.cpp
         #        lcd/049_group-anagrams.cpp
-        lcd/003_longest-Substring-Without-Repeating-Characters.cpp)
+        #        lcd/003_longest-Substring-Without-Repeating-Characters.cpp
+        lcd/187_repeated-dna-sequences.cpp)
