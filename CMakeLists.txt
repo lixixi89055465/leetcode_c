@@ -37,4 +37,4 @@ add_executable(leetcode_C
         #        lcd/049_group-anagrams.cpp
         #        lcd/003_longest-Substring-Without-Repeating-Characters.cpp
         #        lcd/187_repeated-dna-sequences.cpp
-        lcd/076_minimum-window-substring.cpp)
+        lcd/076_minimum-window-substring.cpp lcd/200_number_of_islands.cpp)
