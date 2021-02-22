@@ -8,7 +8,23 @@
 class Solution {
 public:
     int numIslands(std::vector<std::vector<char>> &grid) {
-
+        int island_num = 0;
+        std::vector<std::vector<int>> mark;
+        for (int i = 0; i < grid.size(); i++) {
+            mark.push_back(std::vector<int>());
+            for (int j = 0; j < grid[i].size(); j++) {
+                mark[i].push_back(0);
+            }
+        }
+        for (int i = 0; i < grid.size(); i++) {
+            for (int j = 0; j < grid[i].size(); j++) {
+                if (grid[i][j] == '1' && mark[i][j] == 0) {
+                    DFS(mark, grid, i, j);
+                    island_num++;
+                }
+            }
+        }
+        return island_num++;
     }
 
     void BFS(std::vector<std::vector<int>> &mark,
@@ -58,3 +74,18 @@ public:
         }
     }
 };
+
+int main() {
+    std::vector<std::vector<char>> grid;
+    char str[10][10] = {"11100", "11000", "00100", "00011"};
+    for (int i = 0; i < 4; i++) {
+        grid.push_back(std::vector<char>());
+        for (int j = 0; j < 5; j++) {
+            grid[i].push_back(str[i][j]);
+        }
+    }
+    Solution solve;
+    printf("%d\n", solve.numIslands(grid));
+    return 0;
+
+}
