@@ -48,32 +48,6 @@ public:
 
     }
 
-    int BFS_graph1(std::string &beginWord, std::string &endWord,
-                   std::map<std::string, std::vector<std::string>> &graph) {
-        std::queue<std::pair<std::string, int>> Q;// 搜索队列<顶点，步数>
-        std::set<std::string> visit;// 记录已访问的顶点。
-        Q.push(std::make_pair(beginWord, 1)); //添加起始点，起始步数为1
-        visit.insert(beginWord); //标记起点已访问
-        while (!Q.empty()) {
-            std::string node = Q.front().first; //取队列头部节点与步数
-            int step = Q.front().second;
-            Q.pop();
-            if (node == endWord) {
-                return step;
-            }
-            const std::vector<std::string> &neighbors = graph[node];
-            for (int i = 0; i < neighbors.size(); i++) {
-                if (visit.find(neighbors[i]) == visit.end()) {
-                    Q.push(std::make_pair(neighbors[i], step + 1));
-                    visit.insert(neighbors[i]);
-                }
-            }
-        }
-        return 0;
-
-    }
-
-
     int ladderLength(std::string beginWord, std::string endWord,
                      std::vector<std::string> &wordList) {
         std::map<std::string, std::vector<std::string>> graph;
@@ -81,10 +55,10 @@ public:
         return BFS_graph1(beginWord, endWord, graph);
     }
 
-    void BFS_graph2(std::string &beginWord, std::string &endWord,
-                    std::map<std::string, std::vector<std::string>> &graph,
-                    std::vector<Qitem> &Q,// 使用 vector 实现的队列，可保存所有信息
-                    std::vector<int> &end_word_pos) {
+    void BFS_graph(std::string &beginWord, std::string &endWord,
+                   std::map<std::string, std::vector<std::string>> &graph,
+                   std::vector<Qitem> &Q,// 使用 vector 实现的队列，可保存所有信息
+                   std::vector<int> &end_word_pos) {
         std::map<std::string, int> visit; //<单词，步数>
         int min_step = 0; //到达 endWord 的最小步数
         Q.push_back(Qitem(beginWord.c_str(), -1, 1));//起始单词的前驱为 -1
@@ -114,7 +88,55 @@ public:
         front++;
     }
 
+    std::vector<std::vector<std::string>> findLadders(
+            std::string beginWord, std::string endWord,
+            std::vector<std::string> &wordList) {
+        std::map<std::stsring, std::vector<std::string>> graph;
+        construct_graph(beginWord, wordList, graph);
+        std::vector<Qitem> Q;//使用vector 实现的队列
+        std::vector<int> end_word_pos; //endWord 在搜索队列的位置
+        BFS_graph(beginWord, endWord, graph, Q, end_word_pos);
+        std::vector<std::vector<std::string>> result; //最终结果
+        for (int i = 0; i < end_word_pos.size(); i++) {
+            int pos = end_word_pos[i];
+            std::vector<std::string> path;
+            while (pos != -1) {
+                path.push_back(Q[pos].node);
+                pos = Q[pos].parent_pos;
+            }
+            result.push_back(std::vector<std::string>());
+            for (int j = path.size() - 1; j >= 0; j--) {
+                result[i].push_back(path[j]);
+            }
+        }
+        return result;
+    }
+
 };
+
+void construct_graph(std::string &beginWord,
+                     std::vector<std::string> &wordList,
+                     std::map<std::string, std::vector<std::string>> &graph) {
+    int has_begin_word = 0;
+    for (int i = 0; i < wordList.size(); i++) {
+        if (wordList[i] == beginWord) {
+            has_begin_word = 1;
+        }
+        graph[wordList[i]] = std::vector<std::string>();
+    }
+    for (int i = 0; i < wordList.size(); i++) {
+        for (int j = i + 1; j < wordList.size(); j++) {
+            if (connect(wordList[i], wordList[j])) {
+                graph[wordList[i]].push_back(wordList[j]);
+                graph[wordList[j]].push_back(wordList[i]);
+            }
+        }
+        if (has_begin_word == 0 && connect(beginWord, wordList[i])) {
+            graph[beginWord].push_back(wordList[i]);
+        }
+
+    }
+}
 
 int main() {
     std::string beginWord = "hit";
@@ -127,7 +149,16 @@ int main() {
     wordList.push_back("log");
     wordList.push_back("cog");
     Solution solve;
-    int result = solve.ladderLength(beginWord, endWord, wordList);
-    printf("result = %d \n", result);
+    std::vector<std::vector<std::string>> result =
+            solve.findLadders(beginWord, endWord, wordList);
+    for (int i = 0; i < result.size(); i++) {
+        for (int j = 0; j < result[i].size(); j++) {
+            printf("[%s] ", result[i][j].c_str());
+        }
+        printf("\n");
+    }
+    return 0;
+
+
     return 0;
 }
