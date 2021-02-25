@@ -39,4 +39,5 @@ add_executable(leetcode_C
         #        lcd/187_repeated-dna-sequences.cpp
         #        lcd/076_minimum-window-substring.cpp
         #        lcd/200_number_of_islands.cpp
-        lcd/127_word-ladder.cpp)
+        #        lcd/127_word-ladder.cpp
+        lcd/473_matchsticks-to-square1.cpp)
