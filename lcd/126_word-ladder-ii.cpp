@@ -81,6 +81,38 @@ public:
         return BFS_graph1(beginWord, endWord, graph);
     }
 
+    void BFS_graph2(std::string &beginWord, std::string &endWord,
+                    std::map<std::string, std::vector<std::string>> &graph,
+                    std::vector<Qitem> &Q,// 使用 vector 实现的队列，可保存所有信息
+                    std::vector<int> &end_word_pos) {
+        std::map<std::string, int> visit; //<单词，步数>
+        int min_step = 0; //到达 endWord 的最小步数
+        Q.push_back(Qitem(beginWord.c_str(), -1, 1));//起始单词的前驱为 -1
+        visit[beginWord] = 1;// 标记起始单词步数为1
+        int front = 1;
+        while (front != Q.size()) {
+            const std::string &node = Q[front].node;
+            int step = Q[front].step;//取队列元素
+            if (min_step != 0 && step > min_step) {
+                break;
+            }
+            if (node == endWord) {
+                min_step = step;
+                end_word_pos.push_back(front);
+            }
+            const std::vector<std::string> &neightbors = graph[node];
+            for (int i = 0; i < neightbors.size(); i++) {
+                if (visit.find(neightbors[i]) == visit.end() ||
+                    visit[neightbors[i]] == step + 1) {
+
+                    Q.push_back(Qitem(neightbors[i], front, step + 1));
+                    visit[neightbors[i]] = step + 1;//标记到达临接点neightbors[i]的最小步数
+                }
+            }
+
+        }
+        front++;
+    }
 
 };
 
