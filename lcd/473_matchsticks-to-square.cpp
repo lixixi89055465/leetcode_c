@@ -29,9 +29,10 @@ private:
                    && bucket[2] == target && bucket[3] == target;
         }
         for (int j = 0; j < 4; j++) {
-            if (bucket[j] + nums[j] > target) {
+            if (bucket[j] + nums[i] > target) {
                 continue;
             }
+            printf("%d\n", bucket[j]);
             bucket[j] += nums[i];
             if (generate(i + 1, nums, target, bucket)) {
                 return true;
@@ -41,3 +42,18 @@ private:
         return false;
     }
 };
+
+
+int main() {
+    std::vector<int> nums;
+    nums.push_back(1);
+    nums.push_back(1);
+    nums.push_back(2);
+    nums.push_back(4);
+    nums.push_back(3);
+    nums.push_back(2);
+    nums.push_back(3);
+    Solution solve;
+    printf("%d\n", solve.makesquare(nums));
+    return 0;
+}

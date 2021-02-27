@@ -40,4 +40,5 @@ add_executable(leetcode_C
         #        lcd/076_minimum-window-substring.cpp
         #        lcd/200_number_of_islands.cpp
         #        lcd/127_word-ladder.cpp
-        lcd/473_matchsticks-to-square1.cpp)
+        #        lcd/473_matchsticks-to-square.cpp)
+        lcd/473_matchsticks-to-square1.cpp lcd/407_trapping-rain-water-ii.cpp)
