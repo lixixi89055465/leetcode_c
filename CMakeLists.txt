@@ -41,9 +41,9 @@ add_executable(leetcode_C
         #        lcd/200_number_of_islands.cpp
         #        lcd/127_word-ladder.cpp
         #        lcd/473_matchsticks-to-square.cpp)
-        #        lcd/down_500/473_matchsticks-to-square1.cpp
-        #        lcd/down_500/407_trapping-rain-water-ii.cpp
-        #        lcd/down_100/070_climbing-stairs.cpp
-        #        lcd/down_200/198_house-robber.cpp
-        #        lcd/down_100/053_maximum-subarray.cpp
-        lcd/down_400/322_coin-change_medium.cpp)
+        #        lcd/down_400/473_matchsticks-to-square1.cpp
+        #        lcd/down_400/407_trapping-rain-water-ii.cpp
+        #        lcd/down_000/070_climbing-stairs.cpp
+        #        lcd/down_100/198_house-robber.cpp
+        #        lcd/down_000/053_maximum-subarray.cpp
+        lcd/down_300/322_coin-change_medium.cpp)
