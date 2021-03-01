@@ -45,4 +45,5 @@ add_executable(leetcode_C
         #        lcd/down_500/407_trapping-rain-water-ii.cpp
         #        lcd/down_100/070_climbing-stairs.cpp
         #        lcd/down_200/198_house-robber.cpp
-        lcd/down_100/053_maximum-subarray.cpp)
+        #        lcd/down_100/053_maximum-subarray.cpp
+        lcd/down_400/322_coin-change_medium.cpp)
