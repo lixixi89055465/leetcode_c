@@ -47,4 +47,5 @@ add_executable(leetcode_C
         #        lcd/down_100/198_house-robber.cpp
         #        lcd/down_000/053_maximum-subarray.cpp
         #        lcd/down_300/322_coin-change_medium.cpp
-        lcd/down_100/120_maximum-subarray-medium.cpp lcd/down_300/300_longest-increasing-subsequence.cpp)
+        #        lcd/down_100/120_maximum-subarray-medium.cpp
+        lcd/down_300/300_longest-increasing-subsequence-i.cpp)

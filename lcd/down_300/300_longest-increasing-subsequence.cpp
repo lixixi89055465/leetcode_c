@@ -24,5 +24,6 @@ public:
                 LIS = dp[i];
             }
         }
+        return 0;
     }
 };

@@ -29,3 +29,13 @@ public:
 };
 
 
+int main(){
+    int test[]={1,3,2,3,1,4} ;
+    std::vector<int> nums;
+    for(int i=0;i<6;i++){
+        nums.push_back(test[i]);
+    }
+    Solution solve;
+    printf("%d\n",solve.lengthOfLIS(nums));
+    return 0;
+}
