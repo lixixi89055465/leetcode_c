@@ -28,3 +28,19 @@ public:
     }
 
 };
+
+int main() {
+    int test[][3] = {{1, 3, 1},
+                     {1, 5, 1},
+                     {4, 2, 1}};
+    std::vector<std::vector<int>> grid;
+    for (int i = 0; i < 3; i++) {
+        grid.push_back(std::vector<int>());
+        for (int j = 0; j < 3; j++) {
+            grid[i].push_back(test[i][j]);
+        }
+    }
+    Solution solve;
+    printf("%d\n", solve.minPathSum(grid));
+    return 0;
+}
