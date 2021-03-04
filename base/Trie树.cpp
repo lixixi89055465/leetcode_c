@@ -3,6 +3,8 @@
 // Trie 树前序遍历
 //
 #include "stdio.h"
+#include "vector"
+#include "string"
 
 #define TRIE_MAX_CHAR_NUM 26
 
@@ -32,6 +34,62 @@ void preorder_trie(TrieNode *node, int layer) {
         }
     }
 }
+
+void get_all_word_from_trie(TrieNode *node,
+                            std::string &word,
+                            std::vector<std::string> &word_list) {
+    for (int i = 0; i < TRIE_MAX_CHAR_NUM; i++) {
+        if (node->child[i]) {
+            word.push_back('a');
+            if (node->child[i]->is_end) {
+                word_list.push_back(word);
+            }
+            get_all_word_from_trie(node->child[i], word, word_list);
+            word.erase(word.length() - 1, 1);
+        } //弹出栈顶字符
+
+    }
+}
+
+class TrieTree {
+
+public:
+    TrieTree() {}
+
+    ~TrieTree() {
+        for (int i = 0; i < _node_vec.size(); i++) {
+            delete _node_vec[i];
+        }
+    }
+
+    void insert(const char *word) {
+
+    }
+
+    bool search(const char *word) {
+
+    }
+
+    bool startsWith(const char *prefix) {
+
+    }
+
+    TrieNode *root() {
+        return &_root;
+    }
+
+private:
+    std::vector<TrieNode *> _node_vec;
+    TrieNode _root;
+
+    TrieNode *new_node() {
+        TrieNode *node = new TrieNode();
+        _node_vec.push_back(node);
+        return node;
+    }
+
+
+};
 
 int main() {
     TrieNode root;
@@ -67,5 +125,13 @@ int main() {
     n10.is_end = true;
     n11.is_end = true;
 
-    preorder_trie(&root, 1);
+//    preorder_trie(&root, 1);
+
+    std::vector<std::string> wordlist;
+    std::string word;
+    get_all_word_from_trie(&root, word, wordlist);
+    for (int i = 0; i < wordlist.size(); i++) {
+        printf("%s\n", wordlist[i]);
+    }
+    return 0;
 }
