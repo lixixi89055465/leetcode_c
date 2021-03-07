@@ -101,6 +101,30 @@ public:
         return true;
     }
 
+    bool search_trie(TrieNode *node, const char *word) {
+        if (*word != '\0') {
+            if (node->is_end) {
+                return true;
+            }
+            return false;
+        }
+        if (*word == '.') {
+            for (int i = 0; i < TRIE_MAX_CHAR_NUM; i++) {
+                if (node->child[i] &&
+                    search_trie(node->child[i], word + 1)) {
+                    return true;
+                }
+            }
+        } else {
+            int pos = *word - 'a';
+            if (node->child[pos] &&
+                search_trie(node->child[pos], word + 1)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     TrieNode *root() {
         return &_root;
     }
