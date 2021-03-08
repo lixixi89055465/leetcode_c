@@ -52,4 +52,7 @@ add_executable(leetcode_C
         #        lcd/down_000/064_minimum-path-sum-medium.cpp
         #        lcd/down_100/174_dungeon-game-hard.cpp
         #        base/Trie树.cpp)
-        lcd/down_200/208_implement-trie-prefix-tree-medium.cpp lcd/down_200/211_add-and-search-word-data-structure-design-medium.cpp)
+        #        lcd/down_200/208_implement-trie-prefix-tree-medium.cpp
+        #        lcd/down_200/211_add-and-search-word-data-structure-design-medium.cpp
+        #        lcd/down_547/547_friend-circles-medium.cpp
+        base/DisjoinSet1.cpp)
