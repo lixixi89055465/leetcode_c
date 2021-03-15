@@ -60,3 +60,21 @@ int sum_range_segment_tree(std::vector<int> &value,
     return sum_range_segment_tree(value, pos * 2 + 1, left, mid, qleft, qright)
            + sum_range_segment_tree(value, pos * 2 + 2, mid + 1, right, qleft, qright);
 }
+
+void update_segment_tree(std::vector<int> &value,
+                         int pos, int left, int right,
+                         int index, int new_value) {
+    if (left == right && left == index) {
+        value[pos] = new_value;
+        return;
+    }
+    int mid = (left + right) / 2;
+    if (index <= mid) {
+        update_segment_tree(value, pos * 2 + 1,
+                            left, mid, index, new_value);
+    } else {
+        update_segment_tree(value, pos * 2 + 2, mid + 1,
+                            right, index, new_value);
+    }
+    value[pos] = value[pos * 2 + 1] + value[pos * 2 + 2];
+}
