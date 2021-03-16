@@ -56,4 +56,5 @@ add_executable(leetcode_C
         #        lcd/down_200/211_add-and-search-word-data-structure-design-medium.cpp
         #        lcd/down_547/547_friend-circles-medium.cpp
         #        base/DisjoinSet1.cpp
-        base/DisjoinSet2.cpp lcd/down_300/307_range-sum-query-mutable-medium.cpp)
+        #        base/DisjoinSet2.cpp
+        lcd/down_000/059_Spiral_matrixs.cpp)
