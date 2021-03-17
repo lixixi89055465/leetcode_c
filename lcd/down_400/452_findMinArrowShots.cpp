@@ -11,6 +11,10 @@ typedef struct Node {
     bool status; //当status 为 1是表示已经被排除。反之亦然
 } Node;
 
+
+
+
+
 class Solution {
 public:
 
@@ -46,6 +50,12 @@ void printVector(std::vector<Node> &nums) {
     }
 }
 
+void findMinArrowShots(std::vector<std::vector<int>> &points) {
+    std::sort(vectors.begin(), vectors.end(), sortByBegin);
+    for()
+
+}
+
 int main() {
     std::vector<Node> vectors;
     MyPushBack(vectors, 4, 9);
@@ -69,8 +79,8 @@ int main() {
     std::sort(vectors.begin(), vectors.end(), sortByBegin);
     printVector(vectors);
     Solution solution;
-    int count=solution.findMinArrowShots(vectors);
-    printf("count: %d \n",count);
+    int count = solution.findMinArrowShots(vectors);
+    printf("count: %d \n", count);
 
 }
 
