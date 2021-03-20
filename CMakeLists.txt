@@ -44,13 +44,13 @@ add_executable(leetcode_C
         #        lcd/down_400/473_matchsticks-to-square1.cpp
         #        lcd/down_400/407_trapping-rain-water-ii.cpp
         #        lcd/down_000/070_climbing-stairs.cpp
-        #        lcd/down_100/198_house-robber.cpp
+        #        lcd/100/198_house-robber.cpp
         #        lcd/down_000/053_maximum-subarray.cpp
         #        lcd/down_300/322_coin-change_medium.cpp
-        #        lcd/down_100/120_maximum-subarray-medium.cpp
+        #        lcd/100/120_maximum-subarray-medium.cpp
         #        lcd/down_300/300_longest-increasing-subsequence-i.cpp
         #        lcd/down_000/064_minimum-path-sum-medium.cpp
-        #        lcd/down_100/174_dungeon-game-hard.cpp
+        #        lcd/100/174_dungeon-game-hard.cpp
         #        base/Trie树.cpp)
         #        lcd/down_200/208_implement-trie-prefix-tree-medium.cpp
         #        lcd/down_200/211_add-and-search-word-data-structure-design-medium.cpp
@@ -58,4 +58,6 @@ add_executable(leetcode_C
         #        base/DisjoinSet1.cpp
         #        base/DisjoinSet2.cpp
         #        lcd/down_400/452_findMinArrowShots2.cpp
-        lcd/down_000/092_reverseBetween.cpp lcd/1600/1600_ParkingSystem-simple.cpp)
+        #        lcd/down_000/092_reverseBetween.cpp
+        #        lcd/1600/1600_ParkingSystem-simple.cpp
+        lcd/100/150_evalRPN-medium.cpp)
