@@ -60,4 +60,5 @@ add_executable(leetcode_C
         #        lcd/down_400/452_findMinArrowShots2.cpp
         #        lcd/down_000/092_reverseBetween.cpp
         #        lcd/1600/1600_ParkingSystem-simple.cpp
-        lcd/100/150_evalRPN-medium.cpp)
+        #        lcd/100/150_evalRPN-medium.cpp
+        lcd/100/073_setZeroes_medium.cpp)
