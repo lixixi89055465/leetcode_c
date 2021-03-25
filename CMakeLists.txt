@@ -64,4 +64,5 @@ add_executable(leetcode_C
 #                lcd/100/073_setZeroes_medium.cpp
 #        lcd/100/191_hammingWeight.cpp
 #        base/test1.cpp
-        lcd/down_300/341_NestedIterator1_medium.cpp)
+#        lcd/down_300/341_NestedIterator1_medium.cpp
+        lcd/down_400/456_find132pattern_medium.cpp)

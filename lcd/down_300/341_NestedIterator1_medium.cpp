@@ -164,6 +164,10 @@ int main() {
     printf("333000::%d\n", solve.hasNext());
     printf("444000::%d\n", solve.next());
     printf("333000::%d\n", solve.hasNext());
+    printf("444000::%d\n", solve.next());
+    printf("333000::%d\n", solve.hasNext());
+    printf("444000::%d\n", solve.next());
+    printf("333000::%d\n", solve.hasNext());
     return 0;
 }
 
