@@ -61,8 +61,10 @@ add_executable(leetcode_C
         #        lcd/down_000/092_reverseBetween.cpp
         #        lcd/1600/1600_ParkingSystem-simple.cpp
         #        lcd/100/150_evalRPN-medium.cpp
-#                lcd/100/073_setZeroes_medium.cpp
-#        lcd/100/191_hammingWeight.cpp
-#        base/test1.cpp
-#        lcd/down_300/341_NestedIterator1_medium.cpp
-        lcd/down_400/456_find132pattern_medium.cpp)
+        #                lcd/100/073_setZeroes_medium.cpp
+        #        lcd/100/191_hammingWeight.cpp
+        #        base/test1.cpp
+        #        lcd/down_300/341_NestedIterator1_medium.cpp
+        #        lcd/down_400/456_find132pattern_medium.cpp
+        lcd/100/082_deleteDuplicates_medium.cpp
+        )
