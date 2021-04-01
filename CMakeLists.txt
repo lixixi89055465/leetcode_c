@@ -5,5 +5,5 @@ set(CMAKE_CXX_STANDARD 14)
 
 add_executable(leetcode_C
         #        lcd/400/456_find132pattern_medium.cpp
-        lcd/000/090_subsetsWithDup_medium.cpp
+        lcd/1000/1006_clumsy_simple.cpp
         )
