@@ -5,4 +5,5 @@ set(CMAKE_CXX_STANDARD 14)
 
 add_executable(leetcode_C
         #        lcd/400/456_find132pattern_medium.cpp
-        lcd/2000/2013_trap_hard.cpp)
+        #        lcd/2000/2013_trap_hard.cpp
+        lcd/1100/1143_longestCommonSubsequence_medium.cpp)
