@@ -7,4 +7,4 @@ add_executable(leetcode_C
         #        lcd/400/456_find132pattern_medium.cpp
         #        lcd/2000/2013_trap_hard.cpp
         #        lcd/1100/1143_longestCommonSubsequence_medium.cpp
-        lcd/700/781_numRabbits_medium.cpp)
+        lcd/000/088_merge_simple.cpp)
