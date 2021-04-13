@@ -8,4 +8,4 @@ add_executable(leetcode_C
         #        lcd/2000/2013_trap_hard.cpp
         #        lcd/1100/1143_longestCommonSubsequence_medium.cpp
         #        lcd/000/081_search_medium.cpp
-        lcd/100/179_largestNumber_medium.cpp)
+        lcd/700/783_minDiffInBST_simple.cpp)
