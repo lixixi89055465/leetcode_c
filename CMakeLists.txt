@@ -8,4 +8,4 @@ add_executable(leetcode_C
         #        lcd/2000/2013_trap_hard.cpp
         #        lcd/1100/1143_longestCommonSubsequence_medium.cpp
         #        lcd/000/081_search_medium.cpp
-        lcd/200/220_containsNearbyAlmostDuplicate_medium_1.cpp 大雪菜/背包问题01_simple.cpp)
+        lcd/200/220_containsNearbyAlmostDuplicate_medium_1.cpp 大雪菜/背包问题01_simple.cpp 大雪菜/最长公共子序列.cpp)
