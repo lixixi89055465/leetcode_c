@@ -22,4 +22,4 @@ add_executable(leetcode_C
         #        DP/买卖股票问题.cpp
         #        DP/最佳加法表达式_medium.cpp
         #        DP/硬币问题.cpp
-        DP/书的复制_01.cpp)
+        DP/Toms_trouble.cpp)
